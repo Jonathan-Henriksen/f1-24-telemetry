@@ -1,7 +1,6 @@
-from dataclasses import dataclass
 from enum import Enum
 
-class PacketID(Enum):
+class PacketIDs(Enum):
     MOTION = 0           # Contains all motion data for player’s car – only sent while player is in control
     SESSION = 1          # Data about the session – track, time left
     LAP_DATA = 2         # Data about all the lap times of cars in the session
@@ -17,19 +16,3 @@ class PacketID(Enum):
     TYRE_SETS = 12       # Extended tyre set data
     MOTION_EX = 13       # Extended motion data for player car
     TIME_TRIAL = 14      # Time Trial specific data
-
-# Define the PacketHeader struct
-@dataclass
-class PacketHeader:
-    m_packetFormat: int    # uint16
-    m_gameYear: int        # uint8
-    m_gameMajorVersion: int # uint8
-    m_gameMinorVersion: int # uint8
-    m_packetVersion: int   # uint8
-    m_packetId: int        # uint8
-    m_sessionUID: int      # uint64
-    m_sessionTime: float   # float
-    m_frameIdentifier: int # uint32
-    m_overallFrameIdentifier: int # uint32
-    m_playerCarIndex: int  # int8
-    m_secondaryPlayerCarIndex: int # int8
