@@ -1,0 +1,26 @@
+from enum import Enum
+
+class Teams(Enum):
+    MERCEDES = 0
+    FERRARI = 1
+    RED_BULL_RACING = 2
+    WILLIAMS = 3
+    ASTON_MARTIN = 4
+    ALPINE = 5
+    RB = 6
+    HAAS = 7
+    MCLAREN = 8
+    SAUBER = 9
+    F1_GENERIC = 41
+    F1_CUSTOM_TEAM = 104
+    ART_GP_23 = 143
+    CAMPOS_23 = 144
+    CARLIN_23 = 145
+    PHM_23 = 146
+    DAMS_23 = 147
+    HITECH_23 = 148
+    MP_MOTORSPORT_23 = 149
+    PREMA_23 = 150
+    TRIDENT_23 = 151
+    VAN_AMERSFOORT_RACING_23 = 152
+    VIRTUOSI_23 = 153
